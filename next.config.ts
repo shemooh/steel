@@ -1,15 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Ignore TypeScript/ESLint errors during build (temporary fix)
+  // Ignore TypeScript errors during build (only option still valid)
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuild: true,
-  },
   
-  // Ensure consistent Node.js version
+  // Framer Motion optimization for Turbopack
   experimental: {
     optimizePackageImports: ['framer-motion'],
   },
